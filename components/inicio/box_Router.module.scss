@@ -1,0 +1,25 @@
+.fila_Router{
+    border: 3px solid #28A745;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: #28A745;
+}
+   
+.title{
+    background-color: white;
+    border:  border-primary border-1 rounded;
+    border: solid #28A745 1px;
+    border-radius:10px;
+}
+
+.title:hover{
+    border-color: green;
+}
+
+.contenedor:hover *{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    border-color: green;
+}

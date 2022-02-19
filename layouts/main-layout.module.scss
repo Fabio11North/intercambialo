@@ -1,0 +1,68 @@
+.brand{
+    font-family: 'Satisfy';
+    color: white;
+    user-select: none;
+}
+
+$header_height: 75px;
+$sidebar_width: 75px;
+$footer_height: 75px;
+$selected_color: green;
+
+.header{
+    height: $header_height;
+}
+
+.sidebar{
+    position: sticky;
+    top: $header_height;
+    width: $sidebar_width;
+    overflow: auto;
+}
+
+.sidebarItem{
+    width: $sidebar_width;
+    height: $sidebar_width;
+    transition: background-color 0.25s;
+}
+
+.sidebarItem:hover{
+    background-color: $selected_color;
+}
+
+.footer{
+    display: none;
+    height: $footer_height;
+}
+
+.footerItem{
+    transition: background-color 0.25s;
+    font-size: 9pt;
+}
+
+.footerItem:hover{
+    background-color: $selected_color;
+}
+
+@media only screen and (max-width: 800px) {
+    .sidebar{
+        display: none;
+    }
+
+    .footer{
+        display: block;
+    }
+}
+
+.offcanvasItem:hover{
+    transition: background-color 0.25s;
+    background-color: $selected_color;
+}
+
+.notification{
+    position: relative;
+    .notificationCounter{
+        position: absolute;
+        transform: translate(0px, 10px);
+    }
+}
