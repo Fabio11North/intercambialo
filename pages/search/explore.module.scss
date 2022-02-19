@@ -1,0 +1,136 @@
+.wrapper{
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.dropZone{
+    flex-grow: 1.5;
+    display: flex;
+    position: relative;
+
+    >.symbol{
+        height: 100%;
+        width: 100%;
+
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+
+        font-size: 6vmin;
+
+        transition: all 0.2s ease-out;
+
+        &.times{
+            color: #FE5E41;
+        }
+        &.heart{
+            color: #FFADCB;
+        }
+    }
+
+    &.moving>.symbol{
+        font-size: 7vmin;
+        $grow_scale: 1.1;
+        $offset_x:10px;
+        &.times{
+            transform: scale($grow_scale, $grow_scale) translate($offset_x, 0);
+        }
+        &.heart{
+            transform: scale($grow_scale, $grow_scale) translate(-$offset_x, 0);
+        }
+    }
+    &.moving.hover>.symbol{
+        $grow_scale: 1.5;
+        $offset_x:20px;
+        &.times{
+            transform: scale($grow_scale, $grow_scale) translate($offset_x, 0);
+        }
+        &.heart{
+            transform: scale($grow_scale, $grow_scale) translate(-$offset_x, 0);
+        }
+    }
+}
+
+.cardContainer{
+    padding: 10px;
+
+    display: flex;
+    flex-grow: 8;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+
+    background-color: white;
+    border: 3px green solid;
+    border-radius: 5px;
+
+    padding: 10px;
+
+    width: 100%;
+    max-width: 600px;
+    height: 80%;
+
+    user-select: none;
+
+    will-change: transform;
+    transition: all 0.3s ease-out;
+
+    transform: scale(1, 1);
+
+    overflow-y: auto;
+
+    >.cardGrabbable{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1;
+        &:hover{
+            cursor: grab;
+        }
+    
+        &:active{
+            cursor: grabbing;
+        }
+
+        *{
+            pointer-events: none;
+        }
+    }
+
+    &.moving{
+        transition: all 0.05s ease-out;
+        transform: scale(1.01, 1.01);
+        box-shadow: 0 0 10px 5px rgba(1, 1, 1, 0.25);
+    }
+    
+    &.removed{
+        transform: translate(200vw, 0px);
+        opacity: 0;
+    }
+
+    &.new{
+        transform: translate(0px, -150vh);
+        opacity: 0;
+    }
+}
+
+.h3{
+    font-size: 4vh;
+}
+.h4{
+    font-size: 3vh;
+}

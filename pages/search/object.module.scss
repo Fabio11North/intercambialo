@@ -1,0 +1,6 @@
+.container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(max-content, min(45%, 200px)));
+    gap: 10px;
+}

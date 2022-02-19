@@ -1,0 +1,42 @@
+
+
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.imagen{
+    height: 200px;
+    width: 200px;
+}
+
+.contacto {
+    background-color: hsl(134,61,41,50%);
+    border-radius: 25px 25px 0px 0px;
+    text-align: left;
+    
+}
+
+
+@media only screen and (max-width: 800px) {
+    .body{
+        height: calc(100vh - 150px);
+    }
+    
+}
+
+.modales *{
+    background-color: #28A745 ;
+    color:white;
+}
+
+
+
+
+.boton{
+    background-color: #0072BB;
+}
+
