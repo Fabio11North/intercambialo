@@ -10,7 +10,7 @@ const Config = ()=>{
     const [item, setItem] = useState(null);
 
     useEffect(()=>{
-        setItem(JSON.parse(localStorage.getItem("cache/explore_item")));
+        setItem(JSON.parse(sessionStorage.getItem("cache/explore_item")));
     }, []);
 
     const renderItem = ()=>{
@@ -19,13 +19,13 @@ const Config = ()=>{
                 <div className={'border border-primary border-3 rounded ' + styles.object}>
                     <div className={'d-flex justify-content-center align-items-center ' + styles.blockDiv}>
                         <Block className="w-100">
-                            dummy
+                            {item.nombre}
                         </Block>
                     </div>
                     <div className={styles.detailsDiv}>
-                        <h2>Name</h2>
-                        <h4>100000 Gs</h4>
-                        <h4>Descripcion</h4>
+                        <h2>{item.nombre}</h2>
+                        <h4>{item.precio} Gs</h4>
+                        <h4>{item.descripcion}</h4>
                     </div>
                     <div className={styles.changeDiv}>
                         <h1 className='text-primary'><FaExchangeAlt></FaExchangeAlt></h1>

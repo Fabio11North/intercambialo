@@ -14,7 +14,7 @@ const Object = ()=>{
     },[]);
 
     const saveExploreItem = (element)=>{
-        localStorage.setItem("cache/explore_item", JSON.stringify(element));
+        sessionStorage.setItem("cache/explore_item", JSON.stringify(element));
     }
 
     return(

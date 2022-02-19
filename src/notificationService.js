@@ -2,11 +2,11 @@ const KEY = "list/notification";
 
 //Basic Function
 const setNotificationList = (list)=>{
-    sessionStorage.setItem(KEY, JSON.stringify(list));
+    localStorage.setItem(KEY, JSON.stringify(list));
 }
 
 const getNotificationList = ()=>{
-    let list = JSON.parse(sessionStorage.getItem(KEY));
+    let list = JSON.parse(localStorage.getItem(KEY));
     if(list) return list;
     return [];
 }

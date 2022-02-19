@@ -114,24 +114,36 @@ const MainLayout = (props) => {
                 <Offcanvas.Title><h4>Opciones</h4></Offcanvas.Title>
             </Offcanvas.Header>
             <div className="overflow-auto">
-                <div className={"p-2 d-flex align-items-center " + styles.offcanvasItem}>
-                    <h5 className={"d-flex align-items-center text-white"}><FaHome className="me-3"/>Inicio</h5>
-                </div>
-                <div className={"p-2 d-flex align-items-center " + styles.offcanvasItem}>
-                    <h5 className={"d-flex align-items-center text-white"}><FaBox className="me-3"/>Mis Objetos</h5>
-                </div>
-                <div className={"p-2 d-flex align-items-center " + styles.offcanvasItem}>
-                    <h5 className={"d-flex align-items-center text-white"}><FaSearch className="me-3"/>Explorar</h5>
-                </div>
-                <div className={"p-2 d-flex align-items-center " + styles.offcanvasItem}>
-                    <h5 className={"d-flex align-items-center text-white"}><FaHandshake className="me-3"/>Acuerdos</h5>
-                </div>
-                <div className={"p-2 d-flex align-items-center " + styles.offcanvasItem}>
-                    <h5 className={"d-flex align-items-center text-white"}><CgProfile className="me-3"/>Perfil</h5>
-                </div>
-                <div className={"p-2 d-flex align-items-center " + styles.offcanvasItem}>
-                    <h5 className={"d-flex align-items-center text-white"}><FaCog className="me-3"/>Configuracion</h5>
-                </div>
+                <a href="/">
+                    <div className={"p-2 d-flex align-items-center " + styles.offcanvasItem}>
+                        <h5 className={"d-flex align-items-center text-white"}><FaHome className="me-3"/>Inicio</h5>
+                    </div>
+                </a>
+                <a href="/menu/mis_objetos">
+                    <div className={"p-2 d-flex align-items-center " + styles.offcanvasItem}>
+                        <h5 className={"d-flex align-items-center text-white"}><FaBox className="me-3"/>Mis Objetos</h5>
+                    </div>
+                </a>
+                <a href="/search/config">
+                    <div className={"p-2 d-flex align-items-center " + styles.offcanvasItem}>
+                        <h5 className={"d-flex align-items-center text-white"}><FaSearch className="me-3"/>Explorar</h5>
+                    </div>
+                </a>
+                <a href="/acuerdo/acuerdos">
+                    <div className={"p-2 d-flex align-items-center " + styles.offcanvasItem}>
+                        <h5 className={"d-flex align-items-center text-white"}><FaHandshake className="me-3"/>Acuerdos</h5>
+                    </div>
+                </a>
+                <a href="/perfil">
+                    <div className={"p-2 d-flex align-items-center " + styles.offcanvasItem}>
+                        <h5 className={"d-flex align-items-center text-white"}><CgProfile className="me-3"/>Perfil</h5>
+                    </div>
+                </a>
+                <a>
+                    <div className={"p-2 d-flex align-items-center " + styles.offcanvasItem}>
+                        <h5 className={"d-flex align-items-center text-white"}><FaCog className="me-3"/>Configuracion</h5>
+                    </div>
+                </a>
             </div>
       </Offcanvas>
     </div>

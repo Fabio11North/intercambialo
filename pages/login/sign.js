@@ -43,10 +43,10 @@ export default function Sign(){
                     </Form.Group>
                     <div className='d-grid'>
                         <Button variant='primary mb-2 m-3 text-white' size='lg' onClick={()=>{
-                            imprimir()
+                            Router.push('/')
                         }}>Iniciar Sesion</Button>
                         <Button variant='success m-3' size='lg' onClick={()=>{
-                            Router.push('/Login/login')
+                            Router.push('/login/login')
                         }}>Volver</Button>
                     </div>
                 </Form>

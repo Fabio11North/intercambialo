@@ -18,10 +18,10 @@ export default function Login(){
                     <img className='bootstrap-logo mb-5 ' src="/vector.svg" alt="Vector Logo" />
                     <div className='d-grid'>
                         <Button variant='primary mb-3  text-white' size='lg' onClick={()=>{
-                            Router.push('/Login/sign');
+                            Router.push('/login/sign');
                         }}>Iniciar Sesion</Button>
                         <Button variant='success' size='lg' onClick={()=>{
-                            Router.push('/Login/register')
+                            Router.push('/login/register')
                         }}>Registrarse</Button>
                     </div>
                 </Form>

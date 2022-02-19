@@ -27,10 +27,10 @@ export default function Register(){
                 </Form.Group>
                 <div className='d-grid'>
                         <Button variant='primary mb-3 text-white' size='lg' onClick={()=>{
-                            Router.push('/Login/login')
+                            Router.push('/login/login')
                         }}>Registrarse</Button>
                         <Button variant='success mb-3' size='lg' onClick={()=>{
-                            Router.push('/Login/login')
+                            Router.push('/login/login')
                         }}>Volver</Button>
                 </div>
                 </Form>

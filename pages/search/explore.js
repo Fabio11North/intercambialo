@@ -96,6 +96,7 @@ const Explore = () => {
     useEffect(()=>{
         const parseObject = (object)=>{
             let ret = {};
+
             ret.id = object.id;
             ret.name = object.nombre;
             ret.description = object.descripcion;
@@ -103,11 +104,12 @@ const Explore = () => {
             ret.details = object.detalles;
             ret.image = object.nombre;
             ret.user = object.user;
+
             return ret;
         }
-        let object = JSON.parse(localStorage.getItem("cache/explore_item"));
+        let object = JSON.parse(sessionStorage.getItem("cache/explore_item"));
         setItem(parseObject(object));
-    });
+    },[]);
 
     const rightZoneRef = useRef();
     const leftZoneRef = useRef();
